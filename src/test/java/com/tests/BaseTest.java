@@ -1,6 +1,8 @@
 package com.tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -38,6 +40,14 @@ public class BaseTest {
         String completeUrl = "http://" + host + ":4444/wd/hub";
         dc.setCapability("name", testName);
         this.driver = new RemoteWebDriver(new URL(completeUrl), dc);
+
+//        if(System.getProperty("BROWSER") != null &&
+//                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
+//            this.driver = WebDriverManager.firefoxdriver().create();
+//        }else{
+//            this.driver = WebDriverManager.chromedriver().create();
+//        }
+
     }
 
     @AfterTest

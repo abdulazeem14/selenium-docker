@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ecom-module]">
+  <test thread-count="5" name="ecom-test-java(failed)">
+    <parameter name="keyword" value="java"/>
+    <classes>
+      <class name="com.Ecommerce.tests.EcommerceTest">
+        <methods>
+          <include name="createNewUser"/>
+          <include name="setupDriver"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- com.Ecommerce.tests.EcommerceTest -->
+    </classes>
+  </test> <!-- ecom-test-java(failed) -->
+</suite> <!-- Failed suite [ecom-module] -->
